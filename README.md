@@ -122,9 +122,6 @@ See how a combination of ClojureScript, Clojure and Datomic work together in a s
   * character/intelligence
     * type - long
     * cardinality - one
-  * character/health
-    * type - long
-    * cardinality - one
   * character/hit-points
     * type - long
     * cardinality - one
