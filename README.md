@@ -162,6 +162,9 @@ See how a combination of ClojureScript, Clojure and Datomic work together in a s
     * type - ref (points to Damage Descriptor)
     * cardinality - one
     * component - false (do not want destroy Descriptor if Character is destroyed)
+  * character/handedness
+    * type - long (want enum of Left, Right, Ambidextrous)
+    * cardinality - one
   * character/languages
     * type - ref (points to Language Descriptor)
     * cardinality - many
