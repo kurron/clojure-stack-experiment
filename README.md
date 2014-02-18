@@ -119,6 +119,9 @@ See how a combination of ClojureScript, Clojure and Datomic work together in a s
   * character/reputation
     * type - long
     * cardinality - one
+  * character/techology-level (vague, says "Whatever your world's level is" )
+    * type - long
+    * cardinality - one
   * character/damage-descriptor
     * type - ref (points to Damage Descriptor)
     * cardinality - one
