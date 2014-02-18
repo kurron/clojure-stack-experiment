@@ -90,6 +90,15 @@ See how a combination of ClojureScript, Clojure and Datomic work together in a s
   * character/basic-move
     * type - long
     * cardinality - one
+  * character/appearance
+    * type - long (want an enum: Hideous, Ugly, Unattractive, Average, Attractive, Beautiful, Very Beautiful)
+    * cardinality - one
+  * character/status
+    * type - long
+    * cardinality - one
+  * character/reputation
+    * type - long
+    * cardinality - one
   * character/damage-descriptor
     * type - ref (points to Damage Descriptor)
     * cardinality - one
