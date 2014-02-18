@@ -6,6 +6,22 @@ See how a combination of ClojureScript, Clojure and Datomic work together in a s
 # Data Model (Datomic-like notation)
 
 * Player
+* Damage Descriptor (static values that can be pre-loaded)
+    * damage/strength-attribute (key based on character's strength)
+      * type - long
+      * cardinality - one
+    * damage/thrust-dice-count
+      * type - long
+      * cardinality - one
+    * damage/thrust-modifier
+      * type - long
+      * cardinality - one
+    * damage/swing-dice-count
+      * type - long
+      * cardinality - one
+    * damage/swing-modifier
+      * type - long
+      * cardinality - one
 * Character
   * character/name
     * type - string
@@ -15,7 +31,7 @@ See how a combination of ClojureScript, Clojure and Datomic work together in a s
   * character/player
     * type - ref (points to Player)
     * cardinality - one
-    * component - false (do not want destroy Plaer if Character is destroyed)
+    * component - false (do not want destroy Player if Character is destroyed)
   * character/point-total
     * type - long
     * cardinality - one
@@ -55,3 +71,16 @@ See how a combination of ClojureScript, Clojure and Datomic work together in a s
   * character/fatique-points
     * type - long
     * cardinality - one
+  * character/basic-lift
+    * type - long
+    * cardinality - one
+  * character/basic-speed
+    * type - long
+    * cardinality - one
+  * character/basic-move
+    * type - long
+    * cardinality - one
+  * character/damage-descriptor
+    * type - ref (points to Damage Descriptor)
+    * cardinality - one
+    * component - false (do not want destroy Descriptor if Character is destroyed)
