@@ -22,6 +22,16 @@ See how a combination of ClojureScript, Clojure and Datomic work together in a s
     * damage/swing-modifier
       * type - long
       * cardinality - one
+* Language Descriptor
+  * language/name
+      * type - string
+      * cardinality - one
+  * language/spoken-fluency
+      * type - long (I really want an enum here: None, Broken, Accented, Native)
+      * cardinality - one
+  * language/written-fluency
+      * type - long (I really want an enum here: None, Broken, Accented, Native)
+      * cardinality - one
 * Character
   * character/name
     * type - string
@@ -84,3 +94,7 @@ See how a combination of ClojureScript, Clojure and Datomic work together in a s
     * type - ref (points to Damage Descriptor)
     * cardinality - one
     * component - false (do not want destroy Descriptor if Character is destroyed)
+  * character/languages
+    * type - ref (points to Language Descriptor)
+    * cardinality - many
+    * component - true (destroy Descriptor if Character is destroyed)
