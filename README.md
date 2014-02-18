@@ -174,3 +174,7 @@ See how a combination of ClojureScript, Clojure and Datomic work together in a s
     * type - ref (points to Quirk)
     * cardinality - many
     * component - true (destroy Quirk if Character is destroyed)
+  * character/skills
+    * type - ref (points to Skill)
+    * cardinality - many
+    * component - true (destroy Skill if Character is destroyed)
