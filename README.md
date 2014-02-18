@@ -13,6 +13,16 @@ See how a combination of ClojureScript, Clojure and Datomic work together in a s
   * quirk/type (want enum of Mental or Physical)
     * type - long
     * cardinality - one
+* Skill
+  * skill/level 
+    * type - long
+    * cardinality - one
+  * quirk/type
+    * type - ref (points to a Skill Descriptor)
+    * cardinality - one
+  * skill/cost (how much was paid to acquire the skill) 
+    * type - long
+    * cardinality - one
 * Skill Default Descriptor
   * skill-default/attribute
     * type - long (want enum of Streth, Dexterity, Intelligence, Health)
