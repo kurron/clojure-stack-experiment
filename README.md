@@ -6,6 +6,13 @@ See how a combination of ClojureScript, Clojure and Datomic work together in a s
 # Data Model (Datomic-like notation)
 
 * Player
+* Quirk
+  * quirk/name 
+    * type - string
+    * cardinality - one
+  * quirk/type (want enum of Mental or Physical)
+    * type - long
+    * cardinality - one
 * Trait (Advantage or Disadvantage, static values that can be pre-loaded)
   * trait/name
     * type - string
@@ -124,3 +131,7 @@ See how a combination of ClojureScript, Clojure and Datomic work together in a s
     * type - ref (points to Trait)
     * cardinality - many
     * component - false (do not destroy Trait if Character is destroyed)
+  * character/quirks
+    * type - ref (points to Quirk)
+    * cardinality - many
+    * component - true (destroy Quirk if Character is destroyed)
