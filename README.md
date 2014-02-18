@@ -116,7 +116,7 @@ See how a combination of ClojureScript, Clojure and Datomic work together in a s
   * character/strength
     * type - long
     * cardinality - one
-  * character/dexterify
+  * character/dexterity
     * type - long
     * cardinality - one
   * character/intelligence
@@ -144,6 +144,9 @@ See how a combination of ClojureScript, Clojure and Datomic work together in a s
     * type - long
     * cardinality - one
   * character/basic-move
+    * type - long
+    * cardinality - one
+  * character/dodge
     * type - long
     * cardinality - one
   * character/appearance
