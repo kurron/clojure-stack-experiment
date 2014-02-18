@@ -155,6 +155,18 @@ See how a combination of ClojureScript, Clojure and Datomic work together in a s
   * character/reputation
     * type - long
     * cardinality - one
+  * character/charisma
+    * type - long
+    * cardinality - one
+  * character/odius-personal-habbit
+    * type - long
+    * cardinality - one
+  * character/voice
+    * type - long
+    * cardinality - one
+  * character/wealth
+    * type - long (enum of Dead Broke, Poor, Struggling, Average, Comfortable, Very Wealthi, Filthy Rich)
+    * cardinality - one
   * character/techology-level (vague, says "Whatever your world's level is" )
     * type - long
     * cardinality - one
