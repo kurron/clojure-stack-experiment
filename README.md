@@ -13,6 +13,32 @@ See how a combination of ClojureScript, Clojure and Datomic work together in a s
   * quirk/type (want enum of Mental or Physical)
     * type - long
     * cardinality - one
+* Skill Default Descriptor
+  * skill-default/attribute
+    * type - long (want enum of Streth, Dexterity, Intelligence, Health)
+    * cardinality - one
+  * skill-default/modifier
+    * type - long
+    * cardinality - one
+* Skill Descriptor (static values that can be pre-loaded)
+  * skill/name
+    * type - string
+    * cardinality - one
+  * skill/controlling-attribute
+    * type - long (want enum of Streth, Dexterity, Intelligence, Health)
+    * cardinality - one
+  * skill/level
+    * type - long (want enum of Easy, Average, Hard)
+    * cardinality - one
+  * skill/description
+    * type - string
+    * cardinality - one
+  * skill/techology-based
+    * type - boolean
+    * cardinality - one
+  * skill/default
+    * type - ref (points to Skill Default Descriptor)
+    * cardinality - one
 * Trait (Advantage or Disadvantage, static values that can be pre-loaded)
   * trait/name
     * type - string
