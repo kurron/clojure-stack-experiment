@@ -6,6 +6,19 @@ See how a combination of ClojureScript, Clojure and Datomic work together in a s
 # Data Model (Datomic-like notation)
 
 * Player
+* Trait (Advantage or Disadvantage, static values that can be pre-loaded)
+  * trait/name
+    * type - string
+    * cardinality - one
+  * trait/cost
+    * type - long
+    * cardinality - one
+  * trait/modifier
+    * type - long
+    * cardinality - one
+  * trait/description
+    * type - string
+    * cardinality - one
 * Damage Descriptor (static values that can be pre-loaded)
     * damage/strength-attribute (key based on character's strength)
       * type - long
@@ -107,3 +120,7 @@ See how a combination of ClojureScript, Clojure and Datomic work together in a s
     * type - ref (points to Language Descriptor)
     * cardinality - many
     * component - true (destroy Descriptor if Character is destroyed)
+  * character/traits
+    * type - ref (points to Trait)
+    * cardinality - many
+    * component - false (do not destroy Trait if Character is destroyed)
