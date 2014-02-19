@@ -1,0 +1,12 @@
+[
+    ;; Quirk Type Enumeration
+    {:db/id #db/id[:db.part/db]
+     :db/ident :quirk/quirkenumeration
+     :db/valueType :db.type/ref
+     :db/cardinality :db.cardinality/one
+     :db/doc "A quirk's enumerated value of acceptable types"
+     :db.install/_attribute :db.part/db}
+
+    [:db/add #db/id[:db.part/user] :db/ident :quirk.quirkenumeration/Mental]
+    [:db/add #db/id[:db.part/user] :db/ident :quirk.quirkenumeration/Physical]
+ ]
