@@ -91,4 +91,78 @@
     [:db/add #db/id[:db.part/user] :db/ident :enumerations.handeness/Right]
     [:db/add #db/id[:db.part/user] :db/ident :enumerations.handeness/Left]
     [:db/add #db/id[:db.part/user] :db/ident :enumerations.handeness/Ambidextrous]
+
+    ;; Quirk Entity 
+    {:db/id #db/id[:db.part/db]
+     :db/ident :quirk/name
+     :db/valueType :db.type/string
+     :db/cardinality :db.cardinality/one
+     :db/doc "The quirk's name."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :quirk/type
+     :db/valueType :db.type/ref
+     :db/cardinality :db.cardinality/one
+     :db/doc "The quirk's type, :enumerations/quirk-type."
+     :db.install/_attribute :db.part/db}
+
+    ;; Skill Default Entity 
+    {:db/id #db/id[:db.part/db]
+     :db/ident :skill-default/attribute
+     :db/valueType :db.type/ref
+     :db/cardinality :db.cardinality/one
+     :db/doc "The default's controlling attribute, :enumerations/primary-attribute."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :skill-default/modifier
+     :db/valueType :db.type/long
+     :db/cardinality :db.cardinality/one
+     :db/doc "The default's modification value, eg -4 or +10."
+     :db.install/_attribute :db.part/db}
+
+    ;; Skill Descriptor Entity 
+    {:db/id #db/id[:db.part/db]
+     :db/ident :skill/name
+     :db/valueType :db.type/string
+     :db/cardinality :db.cardinality/one
+     :db/doc "The skill's name."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :skill/controlling-attribute
+     :db/valueType :db.type/ref
+     :db/cardinality :db.cardinality/one
+     :db/doc "The skill's controlling attribute, :enumerations/primary-attribute."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :skill/level
+     :db/valueType :db.type/ref
+     :db/cardinality :db.cardinality/one
+     :db/doc "The skill's controlling attribute, :enumerations.skill-level."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :skill/description
+     :db/valueType :db.type/string
+     :db/cardinality :db.cardinality/one
+     :db/doc "The skill's detailed description."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :skill/technology-based
+     :db/valueType :db.type/boolean
+     :db/cardinality :db.cardinality/one
+     :db/doc "True if the skill is based on technology."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :skill/default
+     :db/valueType :db.type/ref
+     :db/cardinality :db.cardinality/one
+     :db/doc "The skill's default value."
+     :db.install/_attribute :db.part/db}
+
  ]
