@@ -1,12 +1,94 @@
 [
     ;; Quirk Type Enumeration
     {:db/id #db/id[:db.part/db]
-     :db/ident :quirk/quirkenumeration
+     :db/ident :enumerations/quirk-type
      :db/valueType :db.type/ref
      :db/cardinality :db.cardinality/one
-     :db/doc "A quirk's enumerated value of acceptable types"
+     :db/doc "The enumerated value of possible quirk types"
      :db.install/_attribute :db.part/db}
 
-    [:db/add #db/id[:db.part/user] :db/ident :quirk.quirkenumeration/Mental]
-    [:db/add #db/id[:db.part/user] :db/ident :quirk.quirkenumeration/Physical]
+    [:db/add #db/id[:db.part/user] :db/ident :enumerations.quirk-type/Mental]
+    [:db/add #db/id[:db.part/user] :db/ident :enumerations.quirk-type/Physical]
+
+    ;; Primary Attributes Enumeration
+    {:db/id #db/id[:db.part/db]
+     :db/ident :enumerations/primary-attribute
+     :db/valueType :db.type/ref
+     :db/cardinality :db.cardinality/one
+     :db/doc "The enumerated values of primary attributes"
+     :db.install/_attribute :db.part/db}
+
+    [:db/add #db/id[:db.part/user] :db/ident :enumerations.primary-attribute/Strength]
+    [:db/add #db/id[:db.part/user] :db/ident :enumerations.primary-attribute/Dexterity]
+    [:db/add #db/id[:db.part/user] :db/ident :enumerations.primary-attribute/Intelligence]
+    [:db/add #db/id[:db.part/user] :db/ident :enumerations.primary-attribute/Health]
+
+    ;; Skill Level Enumeration
+    {:db/id #db/id[:db.part/db]
+     :db/ident :enumerations/skill-level
+     :db/valueType :db.type/ref
+     :db/cardinality :db.cardinality/one
+     :db/doc "The enumerated values of possible skill levels"
+     :db.install/_attribute :db.part/db}
+
+    [:db/add #db/id[:db.part/user] :db/ident :enumerations.skill-level/Easy]
+    [:db/add #db/id[:db.part/user] :db/ident :enumerations.skill-level/Average]
+    [:db/add #db/id[:db.part/user] :db/ident :enumerations.skill-level/Hard]
+
+    ;; Language Fluency Enumeration
+    {:db/id #db/id[:db.part/db]
+     :db/ident :enumerations/fluency
+     :db/valueType :db.type/ref
+     :db/cardinality :db.cardinality/one
+     :db/doc "The enumerated values of possible language fluency levels"
+     :db.install/_attribute :db.part/db}
+
+    [:db/add #db/id[:db.part/user] :db/ident :enumerations.fluency/None]
+    [:db/add #db/id[:db.part/user] :db/ident :enumerations.fluency/Broken]
+    [:db/add #db/id[:db.part/user] :db/ident :enumerations.fluency/Accented]
+    [:db/add #db/id[:db.part/user] :db/ident :enumerations.fluency/Native]
+
+    ;; Appearance Enumeration
+    {:db/id #db/id[:db.part/db]
+     :db/ident :enumerations/appearance
+     :db/valueType :db.type/ref
+     :db/cardinality :db.cardinality/one
+     :db/doc "The enumerated values of possible appearance levels"
+     :db.install/_attribute :db.part/db}
+
+    [:db/add #db/id[:db.part/user] :db/ident :enumerations.appearance/Hideous]
+    [:db/add #db/id[:db.part/user] :db/ident :enumerations.appearance/Ugly]
+    [:db/add #db/id[:db.part/user] :db/ident :enumerations.appearance/Unattractive]
+    [:db/add #db/id[:db.part/user] :db/ident :enumerations.appearance/Average]
+    [:db/add #db/id[:db.part/user] :db/ident :enumerations.appearance/Attractive]
+    [:db/add #db/id[:db.part/user] :db/ident :enumerations.appearance/Beautiful]
+    [:db/add #db/id[:db.part/user] :db/ident :enumerations.appearance/Gorgeous]
+
+    ;; Wealth Enumeration
+    {:db/id #db/id[:db.part/db]
+     :db/ident :enumerations/wealth
+     :db/valueType :db.type/ref
+     :db/cardinality :db.cardinality/one
+     :db/doc "The enumerated values of possible wealth levels"
+     :db.install/_attribute :db.part/db}
+
+    [:db/add #db/id[:db.part/user] :db/ident :enumerations.wealth/Broke]
+    [:db/add #db/id[:db.part/user] :db/ident :enumerations.wealth/Poor]
+    [:db/add #db/id[:db.part/user] :db/ident :enumerations.wealth/Struggling]
+    [:db/add #db/id[:db.part/user] :db/ident :enumerations.wealth/Average]
+    [:db/add #db/id[:db.part/user] :db/ident :enumerations.wealth/Comfortable]
+    [:db/add #db/id[:db.part/user] :db/ident :enumerations.wealth/Wealthy]
+    [:db/add #db/id[:db.part/user] :db/ident :enumerations.wealth/Rich]
+
+    ;; Handedness Enumeration
+    {:db/id #db/id[:db.part/db]
+     :db/ident :enumerations/handedness
+     :db/valueType :db.type/ref
+     :db/cardinality :db.cardinality/one
+     :db/doc "The enumerated values of possible handedness"
+     :db.install/_attribute :db.part/db}
+
+    [:db/add #db/id[:db.part/user] :db/ident :enumerations.handeness/Right]
+    [:db/add #db/id[:db.part/user] :db/ident :enumerations.handeness/Left]
+    [:db/add #db/id[:db.part/user] :db/ident :enumerations.handeness/Ambidextrous]
  ]
