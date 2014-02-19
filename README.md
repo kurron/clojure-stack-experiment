@@ -35,7 +35,7 @@ See how a combination of ClojureScript, Clojure and Datomic work together in a s
     * type - string
     * cardinality - one
   * skill/controlling-attribute
-    * type - long (want enum of Streth, Dexterity, Intelligence, Health)
+    * type - long (want enum of Strength, Dexterity, Intelligence, Health)
     * cardinality - one
   * skill/level
     * type - long (want enum of Easy, Average, Hard)
@@ -120,6 +120,9 @@ See how a combination of ClojureScript, Clojure and Datomic work together in a s
     * type - long
     * cardinality - one
   * character/intelligence
+    * type - long
+    * cardinality - one
+  * character/health
     * type - long
     * cardinality - one
   * character/hit-points
