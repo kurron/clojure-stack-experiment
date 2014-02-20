@@ -196,3 +196,16 @@ See how a combination of ClojureScript, Clojure and Datomic work together in a s
     * type - ref (points to Skill)
     * cardinality - many
     * component - true (destroy Skill if Character is destroyed)
+
+---
+H2. Starting Datomic Environment
+1. be in ~/Software/datomic-pro-0.9.4556
+2. bin/transactor config/samples/dev-transactor-template.properties
+3. bin/console --port 8080 dev datomic:dev://localhost:4334/
+4. browse to http://localhost:8080/browse 
+5. bin/shell
+6. make edits to edn file
+7. schema_rdr = new FileReader("/home/vagrant/GitHub/clojure-stack-experiment/datomic/schema.edn");
+8. schema_tx = Util.readAll(schema_rdr).get(0);
+9. txResult = conn.transact(schema_tx).get();
+10. rinse, repeat
