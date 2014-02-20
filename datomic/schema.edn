@@ -230,4 +230,25 @@
      :db/doc "Modifier to apply, eg -1 or -2"
      :db.install/_attribute :db.part/db}
 
+    ;; Language Descriptor
+    {:db/id #db/id[:db.part/db]
+     :db/ident :language/name
+     :db/valueType :db.type/string
+     :db/cardinality :db.cardinality/one
+     :db/doc "The language's name."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :language/spoken-fluency
+     :db/valueType :db.type/ref
+     :db/cardinality :db.cardinality/one
+     :db/doc "How well the language is spoken, refers to one of the :enumerations.fluency enumerations"
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :language/written-fluency
+     :db/valueType :db.type/ref
+     :db/cardinality :db.cardinality/one
+     :db/doc "How well the language is written, refers to one of the :enumerations.fluency enumerations"
+     :db.install/_attribute :db.part/db}
  ]
