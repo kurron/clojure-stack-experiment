@@ -198,7 +198,8 @@ See how a combination of ClojureScript, Clojure and Datomic work together in a s
     * component - true (destroy Skill if Character is destroyed)
 
 ---
-H2. Starting Datomic Environment
+## H2 Starting Datomic Environment
+
 1. be in ~/Software/datomic-pro-0.9.4556
 2. bin/transactor config/samples/dev-transactor-template.properties
 3. bin/console --port 8080 dev datomic:dev://localhost:4334/
