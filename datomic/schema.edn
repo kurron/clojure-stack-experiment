@@ -251,4 +251,173 @@
      :db/cardinality :db.cardinality/one
      :db/doc "How well the language is written, refers to one of the :enumerations.fluency enumerations"
      :db.install/_attribute :db.part/db}
+
+    ;; Character 
+    {:db/id #db/id[:db.part/db]
+     :db/ident :character/name
+     :db/valueType :db.type/string
+     :db/cardinality :db.cardinality/one
+     :db/doc "The character's name."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :character/point-total
+     :db/valueType :db.type/long
+     :db/cardinality :db.cardinality/one
+     :db/doc "Total character points that have been used."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :character/height
+     :db/valueType :db.type/long
+     :db/cardinality :db.cardinality/one
+     :db/doc "Total character's height in centimeters."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :character/weight
+     :db/valueType :db.type/long
+     :db/cardinality :db.cardinality/one
+     :db/doc "Total character's weight in centigrams."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :character/age
+     :db/valueType :db.type/long
+     :db/cardinality :db.cardinality/one
+     :db/doc "Number of days since birth."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :character/unspent-points
+     :db/valueType :db.type/long
+     :db/cardinality :db.cardinality/one
+     :db/doc "Points available for spending."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :character/strength
+     :db/valueType :db.type/long
+     :db/cardinality :db.cardinality/one
+     :db/doc "Character's strength rating."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :character/dexterity
+     :db/valueType :db.type/long
+     :db/cardinality :db.cardinality/one
+     :db/doc "Character's dexterity rating."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :character/intelligence
+     :db/valueType :db.type/long
+     :db/cardinality :db.cardinality/one
+     :db/doc "Character's intelligence rating."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :character/health
+     :db/valueType :db.type/long
+     :db/cardinality :db.cardinality/one
+     :db/doc "Character's health rating."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :character/hit-points
+     :db/valueType :db.type/long
+     :db/cardinality :db.cardinality/one
+     :db/doc "Character's hit point rating."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :character/will
+     :db/valueType :db.type/long
+     :db/cardinality :db.cardinality/one
+     :db/doc "Character's will rating."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :character/perception
+     :db/valueType :db.type/long
+     :db/cardinality :db.cardinality/one
+     :db/doc "Character's perception rating."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :character/fatigue-points
+     :db/valueType :db.type/long
+     :db/cardinality :db.cardinality/one
+     :db/doc "Character's fatigue rating."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :character/basic-lift
+     :db/valueType :db.type/long
+     :db/cardinality :db.cardinality/one
+     :db/doc "Character's lifting capability."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :character/basic-speed
+     :db/valueType :db.type/long
+     :db/cardinality :db.cardinality/one
+     :db/doc "Character's running capability."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :character/basic-move
+     :db/valueType :db.type/long
+     :db/cardinality :db.cardinality/one
+     :db/doc "Character's movement rating."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :character/dodge
+     :db/valueType :db.type/long
+     :db/cardinality :db.cardinality/one
+     :db/doc "Character's dodging ability."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :character/status
+     :db/valueType :db.type/long
+     :db/cardinality :db.cardinality/one
+     :db/doc "Character's social status."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :character/reputation
+     :db/valueType :db.type/long
+     :db/cardinality :db.cardinality/one
+     :db/doc "Character's reputation."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :character/charisma
+     :db/valueType :db.type/long
+     :db/cardinality :db.cardinality/one
+     :db/doc "Character's charisma."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :character/odious-personal-habit
+     :db/valueType :db.type/long
+     :db/cardinality :db.cardinality/one
+     :db/doc "Character's negative personal habit."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :character/voice
+     :db/valueType :db.type/long
+     :db/cardinality :db.cardinality/one
+     :db/doc "Character's speaking or singing voice."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :character/technology-level
+     :db/valueType :db.type/long
+     :db/cardinality :db.cardinality/one
+     :db/doc "Character's tech level."
+     :db.install/_attribute :db.part/db}
  ]
