@@ -206,7 +206,10 @@ See how a combination of ClojureScript, Clojure and Datomic work together in a s
 4. browse to http://localhost:8080/browse 
 5. bin/shell
 6. make edits to edn file
-7. schema_rdr = new FileReader("/home/vagrant/GitHub/clojure-stack-experiment/datomic/schema.edn");
+7. uri = "datomic:dev://localhost:4334/gurps";
+8. Peer.createDatabase(uri); 
+9. conn = Peer.connect(uri);
+8. schema_rdr = new FileReader("/home/vagrant/GitHub/clojure-stack-experiment/datomic/schema.edn");
 8. schema_tx = Util.readAll(schema_rdr).get(0);
 9. txResult = conn.transact(schema_tx).get();
 10. rinse, repeat
