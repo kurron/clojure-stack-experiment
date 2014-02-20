@@ -165,4 +165,33 @@
      :db/doc "The skill's default value."
      :db.install/_attribute :db.part/db}
 
+    ;; Trait Entity 
+    {:db/id #db/id[:db.part/db]
+     :db/ident :trait/name
+     :db/valueType :db.type/string
+     :db/cardinality :db.cardinality/one
+     :db/doc "The trait's name."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :trait/cost
+     :db/valueType :db.type/long
+     :db/cardinality :db.cardinality/one
+     :db/doc "The trait's cost."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :trait/modifier
+     :db/valueType :db.type/long
+     :db/cardinality :db.cardinality/one
+     :db/doc "The trait's modifieir, eg -2 or +4."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :trait/description
+     :db/valueType :db.type/string
+     :db/cardinality :db.cardinality/one
+     :db/doc "Detailed description of the trait."
+     :db.install/_attribute :db.part/db}
+
  ]
