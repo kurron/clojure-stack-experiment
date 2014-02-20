@@ -194,4 +194,40 @@
      :db/doc "Detailed description of the trait."
      :db.install/_attribute :db.part/db}
 
+    ;; Damage Descriptor
+    {:db/id #db/id[:db.part/db]
+     :db/ident :damage/strength-attribute
+     :db/valueType :db.type/long
+     :db/cardinality :db.cardinality/one
+     :db/doc "Strength value used as a lookup key."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :damage/thrust-dice-count
+     :db/valueType :db.type/long
+     :db/cardinality :db.cardinality/one
+     :db/doc "Number of dice to cast for thrusting damage."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :damage/thrust-modifier
+     :db/valueType :db.type/long
+     :db/cardinality :db.cardinality/one
+     :db/doc "Modifier to apply, eg -1 or -2"
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :damage/swing-dice-count
+     :db/valueType :db.type/long
+     :db/cardinality :db.cardinality/one
+     :db/doc "Number of dice to cast when calculating swinging damage."
+     :db.install/_attribute :db.part/db}
+ 
+    {:db/id #db/id[:db.part/db]
+     :db/ident :damage/swing-modifier
+     :db/valueType :db.type/long
+     :db/cardinality :db.cardinality/one
+     :db/doc "Modifier to apply, eg -1 or -2"
+     :db.install/_attribute :db.part/db}
+
  ]
