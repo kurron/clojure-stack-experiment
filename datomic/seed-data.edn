@@ -1,0 +1,6 @@
+[
+    ;; Example Character -- the -1 will be replaced with a real entity id when inserted
+    {:db/id #db/id[:db.part/user -1],
+     :character/name "Ronbo", 
+     :character/point-total 100}
+]
