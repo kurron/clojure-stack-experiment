@@ -1,6 +1,29 @@
 [
     ;; Example Character -- the -1 will be replaced with a real entity id when inserted
-    {:db/id #db/id[:db.part/user -1],
-     :character/name "Ronbo", 
-     :character/point-total 100}
+    {:db/id                           #db/id[:db.part/user -1]
+     :character/name                  "Ronbo" 
+     :character/point-total           101
+     :character/height                102
+     :character/weight                103
+     :character/age                   104
+     :character/unspent-points        105
+     :character/strength              106
+     :character/dexterity             107
+     :character/intelligence          108
+     :character/health                109
+     :character/hit-points            110
+     :character/will                  111
+     :character/perception            112
+     :character/fatigue-points        113
+     :character/basic-lift            114
+     :character/basic-speed           115
+     :character/basic-move            116
+     :character/dodge                 117
+     :character/status                118
+     :character/reputation            119
+     :character/charisma              120
+     :character/odious-personal-habit 121
+     :character/voice                 122
+     :character/technology-level      123
+    }
 ]
