@@ -252,6 +252,21 @@
      :db/doc "How well the language is written, refers to one of the :enumerations.fluency enumerations"
      :db.install/_attribute :db.part/db}
 
+    ;; Odius Personal Habit Descriptor
+    {:db/id #db/id[:db.part/db]
+     :db/ident :habit/description
+     :db/valueType :db.type/string
+     :db/cardinality :db.cardinality/one
+     :db/doc "The habit's detailed description."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :habit/level
+     :db/valueType :db.type/long
+     :db/cardinality :db.cardinality/one
+     :db/doc "The habit's ranking."
+     :db.install/_attribute :db.part/db}
+
     ;; Character 
     {:db/id #db/id[:db.part/db]
      :db/ident :character/name
@@ -402,7 +417,7 @@
 
     {:db/id #db/id[:db.part/db]
      :db/ident :character/odious-personal-habit
-     :db/valueType :db.type/long
+     :db/valueType :db.type/ref
      :db/cardinality :db.cardinality/one
      :db/doc "Character's negative personal habit."
      :db.install/_attribute :db.part/db}
