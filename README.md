@@ -213,3 +213,6 @@ See how a combination of ClojureScript, Clojure and Datomic work together in a s
 8. schema_tx = Util.readAll(schema_rdr).get(0);
 9. txResult = conn.transact(schema_tx).get();
 10. rinse, repeat
+11. data_rdr = new FileReader("/home/vagrant/GitHub/clojure-stack-experiment/datomic/seed-data.edn");
+12. data_tx = Util.readAll(data_rdr).get(0); 
+13. txResult = conn.transact(data_tx).get(); 
