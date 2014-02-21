@@ -420,4 +420,60 @@
      :db/cardinality :db.cardinality/one
      :db/doc "Character's tech level."
      :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :character/appearance
+     :db/valueType :db.type/ref
+     :db/cardinality :db.cardinality/one
+     :db/doc "Character's appearance."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :character/wealth
+     :db/valueType :db.type/ref
+     :db/cardinality :db.cardinality/one
+     :db/doc "Character's wealth rating."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :character/damage
+     :db/valueType :db.type/ref
+     :db/cardinality :db.cardinality/one
+     :db/doc "Character's damage information."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :character/handedness
+     :db/valueType :db.type/ref
+     :db/cardinality :db.cardinality/one
+     :db/doc "Character's dominant hand."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :character/languages
+     :db/valueType :db.type/ref
+     :db/cardinality :db.cardinality/many
+     :db/doc "Character's language proficiencies."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :character/traits
+     :db/valueType :db.type/ref
+     :db/cardinality :db.cardinality/many
+     :db/doc "Character's positive and negative traits."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :character/quirks
+     :db/valueType :db.type/ref
+     :db/cardinality :db.cardinality/many
+     :db/doc "Character's peronality quirks."
+     :db.install/_attribute :db.part/db}
+
+    {:db/id #db/id[:db.part/db]
+     :db/ident :character/skills
+     :db/valueType :db.type/ref
+     :db/cardinality :db.cardinality/many
+     :db/doc "Character's various skills."
+     :db.install/_attribute :db.part/db}
  ]
