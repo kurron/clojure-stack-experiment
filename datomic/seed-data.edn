@@ -22,8 +22,25 @@
      :character/status                118
      :character/reputation            119
      :character/charisma              120
-     :character/odious-personal-habit 121
+     :character/odious-personal-habit #db/id[:db.part/user -3] 
      :character/voice                 122
      :character/technology-level      123
+     :character/appearance            :enumerations.appearance/Hideous
+     :character/wealth                :enumerations.wealth/Wealthy 
+     :character/damage                #db/id[:db.part/user -2] 
+     :character/handedness            :enumerations.handeness/Ambidextrous 
     }
+
+   {:db/id                     #db/id[:db.part/user -2]
+    :damage/strength-attribute 101
+    :damage/thrust-dice-count  102
+    :damage/thrust-modifier    103
+    :damage/swing-dice-count   104 
+    :damage/swing-modifier     105 
+   }
+
+   {:db/id                     #db/id[:db.part/user -3]
+    :habit/description         "Constantly belches." 
+    :habit/level               101
+   }
 ]
