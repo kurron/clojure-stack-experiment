@@ -198,7 +198,7 @@ See how a combination of ClojureScript, Clojure and Datomic work together in a s
     * component - true (destroy Skill if Character is destroyed)
 
 ---
-## H2 Starting Datomic Environment
+## Starting Datomic Environment
 
 1. be in ~/Software/datomic-pro-0.9.4556
 2. bin/transactor config/samples/dev-transactor-template.properties
@@ -216,3 +216,14 @@ See how a combination of ClojureScript, Clojure and Datomic work together in a s
 11. data_rdr = new FileReader("/home/vagrant/GitHub/clojure-stack-experiment/datomic/seed-data.edn");
 12. data_tx = Util.readAll(data_rdr).get(0); 
 13. txResult = conn.transact(data_tx).get(); 
+
+----
+## Queries
+```clojure
+;; Find all entities where :/character/name is equal to "Ronbo"
+[:find ?entity
+ :where
+ [?entity :character/name "Ronbo"]
+]
+```
+
