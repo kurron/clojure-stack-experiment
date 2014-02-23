@@ -227,3 +227,6 @@ See how a combination of ClojureScript, Clojure and Datomic work together in a s
 ]
 ```
 
+## REST Services
+1. lein new compojure-app server
+2. 
