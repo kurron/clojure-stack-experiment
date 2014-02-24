@@ -227,6 +227,46 @@ See how a combination of ClojureScript, Clojure and Datomic work together in a s
 ]
 ```
 
+## Emacs Notes
+1. use [Emcacs PPA](https://launchpad.net/~cassou/+archive/emacs) to get version 24 on Ubuntu, if using an older distro
+2. clone [this GitHub repo](https://github.com/flyingmachine/emacs-for-clojure) to your ~/.emacs.d to get a nice environment
+3. useful bindings
+    * C-g - cancel current action
+    * C-x b - create new buffer
+    * C-x k - kill buffer
+    * C-x C-f - open file
+    * C-x C-s - save file
+    * C-k - kill rest of line
+    * C-/ - undo
+    * C-a - move to the beginning of the line
+    * M-m - move to the first non-white space in the line
+    * C-f - fowared one character
+    * C-b - back one character
+    * M-f - forward one word
+    * M-b - backward one work
+    * C-s - search forward
+    * C-r - search backwards (reverse)
+    * M-< - move to start of buffer
+    * M-> - move to end of buffer
+    * M-g g - goto specified line number
+    * C-space - set mark
+    * M-x - replace string
+    * M-w - kill-ring-save (copy)
+    * M-d - kill-word (cut)
+    * C-y - yank (paste)
+    * M-y - yank next text in kill ring
+    * C-w - kill region
+    * C-k - kill line
+    * tab - indent
+    * C-j - new, indented line
+    * M-/ - hippie exanpsion
+    * M-\ - delete all space around point
+    * C-h k - help on binding
+    * C-h f - help on function
+    * C-x o q - used to close help windows
+    * M-x package-list - list all available packages
+    * M-x package-install - install a peraticular package
+
 ## REST Services
 1. lein new compojure-app server
 2. 
