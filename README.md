@@ -266,6 +266,20 @@ See how a combination of ClojureScript, Clojure and Datomic work together in a s
     * C-x o q - used to close help windows
     * M-x package-list - list all available packages
     * M-x package-install - install a peraticular package
+    * C-x o - switch to other window
+    * C-x 1 - delete other windows
+    * C-x 2 - split windows above and below
+    * C-x 3 - split window side by side
+    * C-x 0 - delete current window
+    * C-c M-n - switch REPL to current namespace in buffer
+    * C-x C-e - evaluate current expression
+    * C-c C-k - compile current buffer
+    * q - close window?
+    * M-C - surround expression
+    * C - -> - slurp
+    * C - <- - barf
+    * C-M f - move to opening parenthesis
+    * C-M b - move the closing parenthesis
 
 ## REST Services
 1. lein new compojure-app server
